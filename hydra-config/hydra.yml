@@ -1,0 +1,46 @@
+serve:
+  cookies:
+    same_site_mode: Lax
+
+urls:
+  self:
+    issuer: http://localhost:4444
+  consent: http://localhost:8000/hydra/consent
+  login: http://localhost:8000/hydra/login
+  logout: http://localhost:8000/hydra/logout
+
+secrets:
+  system:
+    - youReallyNeedToChangeThis
+
+oidc:
+  subject_identifiers:
+    supported_types:
+      - pairwise
+      - public
+    pairwise:
+      salt: youReallyNeedToChangeThis
+
+log:
+  level: debug
+  format: json
+
+oauth2:
+  expose_internal_errors: true
+  hashers:
+    bcrypt:
+      cost: 10
+  pkce:
+    enforced: true
+  client_credentials:
+    default_grant_allowed_scope: true
+  grant_types_default:
+    - authorization_code
+    - refresh_token
+    - client_credentials
+  response_types_default:
+    - code
+    - id_token
+    - token
+    - id_token token
+  scope_strategy: wildcard
