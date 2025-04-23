@@ -50,7 +50,6 @@ ory_django_auth/
 │   └── urls.py                 # Main URL routing
 ├── requirements.txt            # Python dependencies
 ├── test_admin_integration.sh   # Script to test admin integration
-└── todo.md                     # Project task list
 ```
 
 ## Installation
