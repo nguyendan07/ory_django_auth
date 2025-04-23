@@ -1,8 +1,9 @@
-from django.contrib import admin
-from .models import OAuth2Client
-from .hydra_client import HydraClient
-from django.contrib import messages
+from django.contrib import admin, messages
+
 from .forms import OAuth2ClientAdminForm
+from .hydra_client import HydraClient
+from .models import OAuth2Client
+
 
 class OAuth2ClientAdmin(admin.ModelAdmin):
     form = OAuth2ClientAdminForm

@@ -2,11 +2,10 @@
 Ory Hydra client configuration and utility functions.
 """
 
+
 import ory_client
 from django.conf import settings
-import requests
-import json
-from urllib.parse import urlencode
+
 
 class HydraClient:
     """

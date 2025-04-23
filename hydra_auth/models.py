@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class OAuth2Client(models.Model):
     """
     Model to represent an OAuth2 client in the database.

@@ -1,5 +1,7 @@
 from django import forms
+
 from .models import OAuth2Client
+
 
 class OAuth2ClientAdminForm(forms.ModelForm):
     """
